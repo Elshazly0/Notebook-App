@@ -36,6 +36,11 @@ router.get('/', notebookController.getNotebooks);
 
 router.get('/:id', notebookController.getNotebook);
 
+router.get('/sorted/:id', notebookController.getNotebooksSorted);
+
+
+
+router.put('/:id', notebookController.putNotebook)
 
 router.post('/', upload.single('Image'), notebookController.createNotebook)
 router.delete('/:id', notebookController.deleteNotebook)
